@@ -5,7 +5,7 @@
 # November 2017
 #
 
-VERSIONNUMBER ="002Pi"
+VERSIONNUMBER ="Pi003"
 import sys
 import os
 
