@@ -20,12 +20,16 @@ Installing PubNub<BR>
 
 sudo pip install pubnub<BR>
 
-Testing The Thunder Board <BR>
+Testing The Setup<BR>
 
-Interrupt Grove Connector connected to D16 GPIO<BR>
-I2C Grove Connector connected to I2C<BR>
+See the Testing setup in the SDL Tutorial on the Raspberry Pi IOT Thunder Board Kit: <BR>
+http://www.switchdoc.com/2017/12/tutorial-building-an-iot-lightning-detector-with-your-raspberry-pi-part-1/
+
+
 
 testThunderBoard.py - running this program detects the ThunderBoard at address 0x02 or 0x03 and starts detecting lightning <BR>
+
+testLCD.py - running this program detects the LCD and displays a set of messages<BR>
 
 ThunderBoardIOT.py - This is the software for the SwitchDoc Labs Raspberry Pi IOT Kit <BR>
 
