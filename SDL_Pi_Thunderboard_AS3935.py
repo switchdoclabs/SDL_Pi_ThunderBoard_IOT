@@ -203,15 +203,15 @@ class AS3935:
         minstrikes = (minstrikes & 0x03) << 4
         write_data = (self.registers[0x02] & 0xCF) + minstrikes
         self.set_byte(0x02, write_data)
-
-    def get_indoors(self):
+	
+ def get_indoors(self):
         """Determine whether or not the sensor is configured for indoor
         use or not.
 
         Returns True if configured to be indoors, otherwise False.
         """
         self.read_data()
-        if self.registers[0x00] & 0x10 == 0x10:
+        if self.registers[0x00] & 0x20 == 0x20:
             return True
         else:
             return False
@@ -221,9 +221,9 @@ class AS3935:
         """
         self.read_data()
         if indoors:
-            write_value = (self.registers[0x00] & 0xE0) + 0x12
+            write_value = (self.registers[0x00] & 0xE0) + 0x24
         else:
-            write_value = (self.registers[0x00] & 0xE0) + 0x0E
+            write_value = (self.registers[0x00] & 0xE0) + 0x1C
         self.set_byte(0x00, write_value)
 
     def set_mask_disturber(self, mask_dist):
